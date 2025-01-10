@@ -28,6 +28,5 @@ app.use((req, res) => {
   res.status(404).json({ error: 'Route not found' });
 });
 
-const handler = serverless(app);
-
-module.exports.handler = handler;
+// Export the handler for Vercel
+module.exports.handler = serverless(app);
